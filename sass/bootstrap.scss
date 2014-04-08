@@ -4948,6 +4948,12 @@ a.list-group-item.active > .badge,
     padding-top: 48px;
     padding-bottom: 48px;
   }
+
+  .jumbotron {
+    padding: 0\9    /* Sin punto y coma!! */
+  }
+
+
   .container .jumbotron {
     padding-right: 60px;
     padding-left: 60px;
