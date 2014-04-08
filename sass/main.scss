@@ -1,0 +1,398 @@
+@import "vars.scss";
+@import "normalize.scss";
+@import "normal.scss";
+@import "bootstrap.scss";
+@import "bootstrap-theme.scss";
+
+
+//@import "colorbox.scss";
+//@import "compass/css3";
+
+
+//@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,400,600,700,300italic,600italic);
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700);
+
+
+
+/*body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: $baseLineHeight;
+  color: #333333;
+  background-color: #ffffff;
+}*/
+
+body{
+    font-size: $baseFontSize;
+    font-family: $bodyFontFamily;
+    color:$colorBlack;
+    background:$colorWhite;
+    line-height: $baseLineHeight;
+}
+
+
+.wrapper{
+	width:$wapperWidth;
+	margin: 30px auto;
+	position:relative;
+}
+
+#header{
+  width: 100%;
+  height: 100%;
+}
+
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.titulo{
+  text-transform: uppercase;
+  font-size: $baseFontSize + 34;
+  line-height: $baseFontSize + 34;
+}
+
+#square{
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+#rect{
+  width: 10px;
+  height: 50px;
+  display: inline-block;
+}
+
+#thumbs li{
+  margin:10px;
+  display: inline-block;
+  float: left;
+  //zoom:1;
+  width: 163px;
+  height: 300px;
+}
+
+#lineas{
+  width: 100%;
+  height: 11px;
+  background: url('../img/lineas.gif');
+  
+}
+
+#datos{
+  margin-top: 15px;
+}
+
+#titSeccion{
+  @extend #datos;
+  display: none;
+}
+
+.jumbotron{
+  height: 130px;
+  p{
+    //font-size: $baseFontSize + 24;
+    font-size: 2.3em;
+    line-height: 100px;
+    text-transform: uppercase;
+    font-family: Times;
+    letter-spacing: -1px; 
+    span{
+      font-weight: bold;
+      font-family: Arial;
+    }
+
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  
+}
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+  #thumbs li{
+    margin: 10px;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+  #thumbs li{
+    margin-left: 65px;
+  }
+
+  #titSeccion{
+   margin-left: 50px; 
+  }
+}
+
+
+
+.nav>li>a.portadas:hover{
+  background:$colorPortadas;
+}
+
+.nav>li>a.actualidad:hover{
+  background:$colorActualidad;
+}
+
+.nav>li>a.tendencias:hover{
+  background:$colorTendencias;
+}
+
+.nav>li>a.deportes:hover{
+  background:$colorDeportes;
+}
+
+.nav>li>a.lunesDeportivo:hover{
+  background:$colorDeportes;
+}
+
+.nav>li>a.deSabado:hover{
+  background:$colorDeSabado;
+}
+
+.nav>li>a.domingo:hover{
+  background:$colorDomingo;
+}
+
+.nav>li>a.construir:hover{
+  background:$colorConstruir;
+}
+
+.nav>li>a.ideas{
+  &:hover{
+    background:$colorIdeas;
+  }
+  &:active{
+    background:$colorIdeas;
+  }
+}
+
+.nav>li>a.planeta:hover{
+  background:$colorPlaneta;
+}
+
+.nav>li>a.tecnologia:hover{
+  background:$colorTecnologia;
+}
+
+.nav>li>a.btnActive{
+  color:$colorWhite;
+}
+
+
+  .titulo{
+    font-size: $baseFontSize + 16;
+  }
+
+.nav .open>a,
+.nav .open>a:focus{
+    background-color: $colorTendencias;
+    border-color: #428bca;
+    color: $colorWhite;
+  }
+
+
+.portadas{
+  .btnActive{
+      background:$colorPortadas;
+  }//btnActive
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorPortadas;
+  }
+}
+
+
+
+.actualidad{
+  .btnActive{
+    background:$colorActualidad;
+  }//btnActive
+
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorActualidad;
+  }
+
+
+
+}
+
+
+.tendencias{
+  .btnActive{
+    background:$colorTendencias;
+    color:$colorWhite;
+  }//btnActive
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorTendencias;
+  }
+
+}
+
+.deportes{
+  .btnActive{
+    background:$colorDeportes;
+  }//btnActive
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorDeportes;
+  }
+
+}
+
+
+.lunesDeportivo{
+  .btnActive{
+    background:$colorlunesDeportivo;
+  }//btnActive
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorlunesDeportivo;
+  }
+
+}
+
+
+.deSabado{
+  .btnActive{
+    background:$colorDeSabado;
+    color: $colorWhite;
+  }//btnActive
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorDeSabado;
+  }
+
+}
+
+.domingo{
+  .btnActive{
+    background:$colorDomingo;
+  }//btnActive
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorDomingo;
+  }
+
+}
+
+.construir{
+  .btnActive{
+    background:$colorConstruir;
+  }//btnActive
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorConstruir;
+  }
+
+}
+
+.ideas{
+  .btnActive{
+    background:$colorIdeas;
+    color: $colorWhite;
+  }//btnActive
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorIdeas;
+  }
+
+}
+
+.planeta{
+  .btnActive{
+    background:$colorPlaneta;
+     color: $colorWhite;
+  }//btnActive
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorPlaneta;
+  }
+
+}
+
+.tecnologia{
+  .btnActive{
+    background:$colorTecnologia;
+  }//btnActive
+  #square{
+    @extend .btnActive;    
+  }
+  #rect{
+    @extend .btnActive;    
+  }
+  .titulo{
+    color: $colorTecnologia;
+  }
+
+}
+

@@ -1,0 +1,104 @@
+$baseFontSize: 14px;
+$baseLineHeight: 1.428571429;
+$bodyBackground: #fff;
+$bodyFontFamily: Arial;
+$wapperWidth:466px;
+$innerWapperWidth:419px;
+
+//$titleFontFamily: 'Open Sans', sans-serif;
+$colorCeleste:#70d6fd;
+$colorCeleste2:#BAD6E1;
+$colorWhite:#fff;
+$colorBlack:#000;
+$colorAmarillo:#c8c623;
+$colorAzul: #008FC7;
+$colorRojo:#d34a3c ;
+$colorGris:#e2e3e7;
+
+
+$colorTxt:#4f4f4f;
+$colorNavbutton:#333;
+$colorAzul:#417DB0;
+
+
+
+$colorPortadas:#b5b5b5;
+$colorActualidad:#009cd8;
+$colorTendencias:#a974a4;
+$colorDeportes: #f08c33;
+$colorlunesDeportivo: #f08c33;
+$colorDeSabado: #a66ea7;
+$colorDomingo:#b5b5b5;
+$colorConstruir: #8378B2;
+$colorIdeas: #F19FB5;
+$colorPlaneta: #DBC8DC;
+$colorTecnologia:#CED0E7;
+
+
+
+
+.blackShadow{
+	text-shadow: 1px 1px 1px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+
+.clear{
+	clear:both;
+}
+
+@mixin shadow($horz, $vert, $blur,  $color) {
+	text-shadow: $horz $vert $blur $color;
+	filter: dropshadow(color=$color, offx=$horz, offy=$vert);
+}
+
+
+
+.spinner {
+  margin: 100px auto;
+  width: 42px;
+  height: 42px;
+  position: relative;
+}
+
+.cube1, .cube2 {
+  background-color: #0294CF;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: cubemove 1.8s infinite ease-in-out;
+  animation: cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+@-webkit-keyframes cubemove {
+  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+  100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes cubemove {
+  25% { 
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  } 50% { 
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  } 50.1% { 
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  } 75% { 
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  } 100% { 
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
